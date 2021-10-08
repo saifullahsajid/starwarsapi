@@ -11,5 +11,4 @@ import UIKit
 class CharactersTableViewCell: UITableViewCell {
 
     @IBOutlet weak var characterName: UILabel!
-    
 }

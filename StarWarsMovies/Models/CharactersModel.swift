@@ -13,9 +13,6 @@ class CharactersModel: NSObject {
     var name: String?
     
     init(character_name: String?){
-        
         self.name = character_name
-        
     }
-
 }
