@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="l1P-Tr-Vr3">
-    <device id="retina6_1" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="l1P-Tr-Vr3">
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -13,49 +9,49 @@
         <!--Star Wars-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="FilmsViewController" customModule="StarWarsMovies" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="FilmsVC" customModule="StarWarsMovies" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Vy8-Iw-3u3">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="44" width="600" height="556"/>
                                 <color key="backgroundColor" red="0.088984332978725433" green="0.085541494190692902" blue="0.14117647058823529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="FilmsCell" rowHeight="155" id="VTg-Y7-xzn" customClass="FilmsTableViewCell" customModule="StarWarsMovies" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="155"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="FilmsCell" rowHeight="155" id="VTg-Y7-xzn" customClass="FilmsTVC" customModule="StarWarsMovies" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="600" height="155"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VTg-Y7-xzn" id="2cN-p7-k1z">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="154.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="155"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jgb-CR-EBj">
-                                                    <rect key="frame" x="12" y="12" width="390" height="143"/>
+                                                    <rect key="frame" x="12" y="12" width="576" height="143.5"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="starwarsphoto" translatesAutoresizingMaskIntoConstraints="NO" id="qsQ-gI-s8a">
-                                                            <rect key="frame" x="0.0" y="0.0" width="130.5" height="143"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="130.5" height="143.5"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="130.5" id="LmE-GF-5BQ"/>
                                                                 <constraint firstAttribute="height" constant="143" id="MVo-Hr-scg"/>
                                                             </constraints>
                                                         </imageView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="-14" translatesAutoresizingMaskIntoConstraints="NO" id="mz2-XI-9TC">
-                                                            <rect key="frame" x="145.5" y="15" width="229.5" height="100.5"/>
+                                                            <rect key="frame" x="145.5" y="15" width="415.5" height="101"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A New Hope For" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rxY-iD-kbs">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="229.5" height="43"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="415.5" height="43"/>
                                                                     <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="17"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Director Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i3y-re-XhF">
-                                                                    <rect key="frame" x="0.0" y="29" width="229.5" height="42.5"/>
+                                                                    <rect key="frame" x="0.0" y="29" width="415.5" height="43"/>
                                                                     <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Release Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Udq-ED-tpv">
-                                                                    <rect key="frame" x="0.0" y="57.5" width="83.5" height="43"/>
+                                                                    <rect key="frame" x="0.0" y="58" width="83.5" height="43"/>
                                                                     <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
@@ -103,6 +99,7 @@
                                 </prototypes>
                             </tableView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.088984332978725433" green="0.085541494190692902" blue="0.14117647058823529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Vy8-Iw-3u3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="XUf-fy-9S6"/>
@@ -110,7 +107,6 @@
                             <constraint firstItem="Vy8-Iw-3u3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="wKE-A1-vdA"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Vy8-Iw-3u3" secondAttribute="trailing" id="xt7-VQ-byW"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Star Wars" id="iPK-AQ-nHV"/>
                     <connections>
@@ -125,13 +121,13 @@
         <!--Star Wars-->
         <scene sceneID="sQt-Yc-MVt">
             <objects>
-                <viewController id="gPS-pa-pEp" customClass="FilmsDetailViewController" customModule="StarWarsMovies" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="gPS-pa-pEp" customClass="FilmsDetailVC" customModule="StarWarsMovies" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nev-e3-JNC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="1296"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8d2-wK-Svz">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="1296"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="1276"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="starwarsphoto" translatesAutoresizingMaskIntoConstraints="NO" id="vWZ-o1-O1l">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="415"/>
@@ -229,12 +225,12 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="150" id="f5K-kz-fgq"/>
                                                 </constraints>
-                                                <mutableString key="text">It is a period of civil war. Rebel spaceships, striking nfrom a hidden base, have won ntheir first victory against nthe evil Galactic Empire. During the battle, Rebel nspies managed to steal secret nplans to the Empire's nultimate weapon, the DEATH STAR, an armored space nstation with enough power\r\nto destroy an entire planet. Pursued by the Empire's nsinister agents, Princess nLeia races home aboard her nstarship, custodian of the nstolen plans that can save her npeople and restore nfreedom to the galaxy...</mutableString>
+                                                <string key="text">It is a period of civil war. Rebel spaceships, striking nfrom a hidden base, have won ntheir first victory against nthe evil Galactic Empire. During the battle, Rebel nspies managed to steal secret nplans to the Empire's nultimate weapon, the DEATH STAR, an armored space nstation with enough power\r\nto destroy an entire planet. Pursued by the Empire's nsinister agents, Princess nLeia races home aboard her nstarship, custodian of the nstolen plans that can save her npeople and restore nfreedom to the galaxy...</string>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wJU-oc-oqZ">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wJU-oc-oqZ">
                                                 <rect key="frame" x="0.0" y="158" width="100" height="28"/>
                                                 <color key="backgroundColor" red="1" green="0.91648432329999996" blue="0.14566610029999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
@@ -257,15 +253,15 @@
                                         <rect key="frame" x="10" y="781" width="394" height="515"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CharactersCell" rowHeight="56" id="7OG-rf-AsI" customClass="CharactersTableViewCell" customModule="StarWarsMovies" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="28" width="394" height="56"/>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CharactersCell" rowHeight="56" id="7OG-rf-AsI" customClass="CharactersTVC" customModule="StarWarsMovies" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="44.5" width="394" height="56"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7OG-rf-AsI" id="Yz6-XM-HVS">
-                                                    <rect key="frame" x="0.0" y="0.0" width="394" height="55.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="394" height="56"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Character Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4rK-uo-Xa9">
-                                                            <rect key="frame" x="10" y="10" width="374" height="35.5"/>
+                                                            <rect key="frame" x="10" y="10" width="374" height="36"/>
                                                             <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
@@ -309,7 +305,7 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zOL-n5-oqb">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zOL-n5-oqb">
                                         <rect key="frame" x="18" y="38" width="44" height="33"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="33" id="rA2-Kw-EZH"/>
@@ -357,6 +353,7 @@
                                 </constraints>
                             </scrollView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="nn7-9B-23x"/>
                         <color key="backgroundColor" red="0.088984332979999997" green="0.085541494189999998" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="8d2-wK-Svz" firstAttribute="top" secondItem="nev-e3-JNC" secondAttribute="top" id="b2B-ak-NZ8"/>
@@ -364,7 +361,6 @@
                             <constraint firstItem="nn7-9B-23x" firstAttribute="trailing" secondItem="8d2-wK-Svz" secondAttribute="trailing" id="hsz-4H-L6h"/>
                             <constraint firstItem="8d2-wK-Svz" firstAttribute="leading" secondItem="nn7-9B-23x" secondAttribute="leading" id="uBo-nn-H8v"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="nn7-9B-23x"/>
                     </view>
                     <navigationItem key="navigationItem" title="Star Wars" id="EzG-8Z-kOE"/>
                     <size key="freeformSize" width="414" height="1296"/>

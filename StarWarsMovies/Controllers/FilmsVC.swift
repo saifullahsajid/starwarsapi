@@ -1,5 +1,5 @@
 //
-//  FilmsViewController.swift
+//  FilmsVC.swift
 //  StarWarsMovies
 //
 //  Created by Saif Ullah Sajid on 2019-09-04.
@@ -9,15 +9,15 @@
 import UIKit
 import Alamofire
 
-class FilmsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class FilmsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     // MARK: - Outlets
     @IBOutlet weak var filmsTableView: UITableView!
     
     let swapiRequestURL = "https://swapi.dev/api/films/"
-    var globalFilmsList = [FilmsModel]()
+    var globalFilmsList = [Film]()
     var charactersList: [String] = []
-    var selectedFilm:FilmsModel?
+    var selectedFilm:Film?
     
     // MARK: - viewWillAppear
     override func viewWillAppear(_ animated: Bool) {
@@ -50,7 +50,7 @@ class FilmsViewController: UIViewController, UITableViewDelegate, UITableViewDat
                 let producer = film["producer"] as? String
                 let release_date = film["release_date"] as? String
                 
-                let film = FilmsModel(film_title: title, film_characters: self.charactersList, film_director: director, film_opening_crawl: opening_crawl, film_producer: producer, film_releaseDate: release_date)
+                let film = Film(film_title: title, film_characters: self.charactersList, film_director: director, film_opening_crawl: opening_crawl, film_producer: producer, film_releaseDate: release_date)
                 
                 //Saving each iteration in the array
                 self.globalFilmsList.append(film)
@@ -69,9 +69,9 @@ class FilmsViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "FilmsCell", for: indexPath) as! FilmsTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "FilmsCell", for: indexPath) as! FilmsTVC
         
-        let film: FilmsModel
+        let film: Film
         film = globalFilmsList[indexPath.row]
         
         cell.selectionStyle = .none
@@ -97,7 +97,7 @@ class FilmsViewController: UIViewController, UITableViewDelegate, UITableViewDat
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         // Get a reference to the destination Films conrtoller
-        let detailViewController = segue.destination as! FilmsDetailViewController
+        let detailViewController = segue.destination as! FilmsDetailVC
         
         // Set the selected film property of the destination Film controller
         detailViewController.selectedFilm = self.selectedFilm

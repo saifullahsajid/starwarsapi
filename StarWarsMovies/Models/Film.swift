@@ -1,5 +1,5 @@
 //
-//  FilmsModel.swift
+//  Film.swift
 //  StarWarsMovies
 //
 //  Created by Saif Ullah Sajid on 2019-09-04.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FilmsModel: NSObject {
+class Film: NSObject {
     
     var title: String?
     var characters: [String] = []

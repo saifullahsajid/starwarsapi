@@ -1,5 +1,5 @@
 //
-//  FilmsDetailViewController.swift
+//  FilmsDetailVC.swift
 //  StarWarsMovies
 //
 //  Created by Saif Ullah Sajid on 2019-09-05.
@@ -9,7 +9,7 @@
 import UIKit
 import Alamofire
 
-class FilmsDetailViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class FilmsDetailVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     // MARK: - Outlets
     @IBOutlet weak var filmTitle: UILabel!
@@ -20,8 +20,8 @@ class FilmsDetailViewController: UIViewController, UITableViewDelegate, UITableV
     
     @IBOutlet weak var charactersTableView: UITableView!
     
-    var globalCharacterList = [CharactersModel]()
-    var selectedFilm:FilmsModel?
+    var globalCharacterList = [Character]()
+    var selectedFilm:Film?
 
     
     // MARK: - viewDidLoad
@@ -49,7 +49,7 @@ class FilmsDetailViewController: UIViewController, UITableViewDelegate, UITableV
                             print("Could not parse character values")
                             return
                     }
-                    let character = CharactersModel(character_name: charactersData)
+                    let character = Character(character_name: charactersData)
                     
                     //Saving each iteration in the array
                     self.globalCharacterList.append(character)
@@ -73,9 +73,9 @@ class FilmsDetailViewController: UIViewController, UITableViewDelegate, UITableV
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CharactersCell", for: indexPath) as! CharactersTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CharactersCell", for: indexPath) as! CharactersTVC
         
-        let characters: CharactersModel
+        let characters: Character
         characters = self.globalCharacterList[indexPath.row]
         
         //Asssiging data from the array to the cells
