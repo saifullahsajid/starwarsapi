@@ -1,5 +1,5 @@
 //
-//  CharactersModel.swift
+//  Character.swift
 //  StarWarsMovies
 //
 //  Created by Saif Ullah Sajid on 2019-09-05.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CharactersModel: NSObject {
+class Character: NSObject {
     
     var name: String?
     
