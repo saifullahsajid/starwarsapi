@@ -1,5 +1,5 @@
 //
-//  FilmsTableViewCell.swift
+//  FilmsTVC.swift
 //  StarWarsMovies
 //
 //  Created by Saif Ullah Sajid on 2019-09-04.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FilmsTableViewCell: UITableViewCell {
+class FilmsTVC: UITableViewCell {
     
     @IBOutlet weak var filmTitle: UILabel!
     @IBOutlet weak var filmDirector: UILabel!
