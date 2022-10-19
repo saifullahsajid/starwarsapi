@@ -43,7 +43,7 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" name="Primary"/>
+                        <color key="backgroundColor" name="Default"/>
                         <constraints>
                             <constraint firstItem="iXL-7E-ilX" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Twh-Sg-BWY"/>
                             <constraint firstItem="iXL-7E-ilX" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="kJX-RJ-B6s"/>
@@ -57,8 +57,8 @@
     </scenes>
     <resources>
         <image name="sw3" width="300" height="168"/>
-        <namedColor name="Primary">
-            <color red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="Default">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
