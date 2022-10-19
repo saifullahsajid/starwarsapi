@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="l1P-Tr-Vr3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="l1P-Tr-Vr3">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -17,11 +17,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Vy8-Iw-3u3">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="92" width="414" height="770"/>
                                 <color key="backgroundColor" red="0.088984332978725433" green="0.085541494190692902" blue="0.14117647058823529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="FilmsCell" rowHeight="155" id="VTg-Y7-xzn" customClass="FilmsTVC" customModule="StarWarsMovies" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.5" width="414" height="155"/>
+                                        <rect key="frame" x="0.0" y="50" width="414" height="155"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VTg-Y7-xzn" id="2cN-p7-k1z">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="155"/>
@@ -94,6 +94,7 @@
                                         <color key="backgroundColor" red="0.070588235294117646" green="0.070061720907688141" blue="0.14117647058823529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <outlet property="filmDirector" destination="i3y-re-XhF" id="T5d-4q-5A2"/>
+                                            <outlet property="filmThumbnail" destination="qsQ-gI-s8a" id="xmA-fl-Bn1"/>
                                             <outlet property="filmTitle" destination="rxY-iD-kbs" id="H17-8M-ORx"/>
                                             <outlet property="releaseDate" destination="Udq-ED-tpv" id="5AU-O7-Msj"/>
                                         </connections>
@@ -125,11 +126,11 @@
             <objects>
                 <viewController id="gPS-pa-pEp" customClass="FilmsDetailVC" customModule="StarWarsMovies" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nev-e3-JNC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="1242"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1238"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8d2-wK-Svz">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="1242"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="1238"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="starwarsphoto" translatesAutoresizingMaskIntoConstraints="NO" id="vWZ-o1-O1l">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="415"/>
@@ -256,7 +257,7 @@
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CharactersCell" rowHeight="56" id="7OG-rf-AsI" customClass="CharactersTVC" customModule="StarWarsMovies" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="44.5" width="394" height="56"/>
+                                                <rect key="frame" x="0.0" y="50" width="394" height="56"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7OG-rf-AsI" id="Yz6-XM-HVS">
                                                     <rect key="frame" x="0.0" y="0.0" width="394" height="56"/>
@@ -385,7 +386,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="l1P-Tr-Vr3" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="06D-es-AzA">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="48" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="barTintColor" red="0.14800786972045898" green="0.14453330636024475" blue="0.20019897818565369" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

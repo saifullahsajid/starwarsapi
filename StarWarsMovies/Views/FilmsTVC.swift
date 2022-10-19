@@ -13,4 +13,5 @@ class FilmsTVC: UITableViewCell {
     @IBOutlet weak var filmTitle: UILabel!
     @IBOutlet weak var filmDirector: UILabel!
     @IBOutlet weak var releaseDate: UILabel!
+    @IBOutlet weak var filmThumbnail: UIImageView!
 }
