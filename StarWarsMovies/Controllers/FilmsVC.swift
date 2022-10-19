@@ -23,9 +23,9 @@ class FilmsVC: UIViewController {
     let images: [UIImage] = [UIImage(named: "sw1")!, UIImage(named: "sw2")!, UIImage(named: "sw3")!, UIImage(named: "sw4")!, UIImage(named: "sw5")!, UIImage(named: "sw6")!]
     
     // MARK: - viewWillAppear
-    override func viewWillAppear(_ animated: Bool) {
-        navigationController?.navigationBar.barStyle = .black
-    }
+//    override func viewWillAppear(_ animated: Bool) {
+////        navigationController?.navigationBar.barStyle = .black
+//    }
     
     // MARK: - viewDidLoad
     override func viewDidLoad() {
