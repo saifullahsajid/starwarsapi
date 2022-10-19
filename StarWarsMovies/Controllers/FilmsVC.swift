@@ -6,16 +6,6 @@
 //  Copyright © 2019 Coding Homies. All rights reserved.
 //
 
-import UIKit
-import Alamofire
-
-//
-//  FilmsVC.swift
-//  StarWarsMovies
-//
-//  Created by Saif Ullah Sajid on 2019-09-04.
-//  Copyright © 2019 Coding Homies. All rights reserved.
-//
 
 import UIKit
 import Alamofire
@@ -30,6 +20,7 @@ class FilmsVC: UIViewController {
     var globalFilms = [Film]()
     var characters: [String] = []
     var selectedFilm:Film?
+    let images: [UIImage] = [UIImage(named: "sw1")!, UIImage(named: "sw2")!, UIImage(named: "sw3")!, UIImage(named: "sw4")!, UIImage(named: "sw5")!, UIImage(named: "sw6")!]
     
     // MARK: - viewWillAppear
     override func viewWillAppear(_ animated: Bool) {
@@ -92,6 +83,7 @@ extension FilmsVC: UITableViewDelegate, UITableViewDataSource {
         cell.filmTitle.text = globalFilms[indexPath.row].title
         cell.filmDirector.text = globalFilms[indexPath.row].director
         cell.releaseDate.text = globalFilms[indexPath.row].release_date
+        cell.filmThumbnail.image = images.randomElement()
         return cell
     }
     
