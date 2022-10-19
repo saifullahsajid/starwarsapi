@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="l1P-Tr-Vr3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bRN-xK-sRp">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -19,7 +20,7 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Vy8-Iw-3u3">
                                 <rect key="frame" x="0.0" y="92" width="414" height="770"/>
-                                <color key="backgroundColor" name="Primary"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="FilmsCell" rowHeight="155" id="VTg-Y7-xzn" customClass="FilmsTVC" customModule="StarWarsMovies" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="414" height="155"/>
@@ -37,6 +38,11 @@
                                                                 <constraint firstAttribute="width" constant="130.5" id="LmE-GF-5BQ"/>
                                                                 <constraint firstAttribute="height" constant="143" id="MVo-Hr-scg"/>
                                                             </constraints>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                    <integer key="value" value="12"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
                                                         </imageView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="-14" translatesAutoresizingMaskIntoConstraints="NO" id="mz2-XI-9TC">
                                                             <rect key="frame" x="145.5" y="15" width="229.5" height="101"/>
@@ -65,7 +71,7 @@
                                                             </constraints>
                                                         </stackView>
                                                     </subviews>
-                                                    <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="backgroundColor" name="Primary"/>
                                                     <constraints>
                                                         <constraint firstAttribute="trailing" secondItem="mz2-XI-9TC" secondAttribute="trailing" constant="15" id="3x3-JS-Lly"/>
                                                         <constraint firstAttribute="bottom" secondItem="mz2-XI-9TC" secondAttribute="bottom" constant="27.5" id="7k2-Ba-atu"/>
@@ -89,7 +95,6 @@
                                                 <constraint firstAttribute="trailing" secondItem="jgb-CR-EBj" secondAttribute="trailing" constant="12" id="xyo-lq-gco"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" name="Primary"/>
                                         <connections>
                                             <outlet property="filmDirector" destination="i3y-re-XhF" id="T5d-4q-5A2"/>
                                             <outlet property="filmThumbnail" destination="qsQ-gI-s8a" id="xmA-fl-Bn1"/>
@@ -101,7 +106,7 @@
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" name="Primary"/>
+                        <color key="backgroundColor" name="Default"/>
                         <constraints>
                             <constraint firstItem="Vy8-Iw-3u3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="XUf-fy-9S6"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Vy8-Iw-3u3" secondAttribute="bottom" id="mPA-R9-1NO"/>
@@ -109,7 +114,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Vy8-Iw-3u3" secondAttribute="trailing" id="xt7-VQ-byW"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Star Wars" id="iPK-AQ-nHV"/>
+                    <navigationItem key="navigationItem" title="Star Wars" largeTitleDisplayMode="always" id="iPK-AQ-nHV"/>
                     <connections>
                         <outlet property="filmsTableView" destination="Vy8-Iw-3u3" id="9Y4-91-00M"/>
                         <segue destination="gPS-pa-pEp" kind="presentation" identifier="SegueToFilmDetailView" id="vKg-4y-IJf"/>
@@ -117,7 +122,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1198.5507246376812" y="-1422.3214285714284"/>
+            <point key="canvasLocation" x="2108.695652173913" y="-1422.3214285714284"/>
         </scene>
         <!--Star Wars-->
         <scene sceneID="sQt-Yc-MVt">
@@ -130,7 +135,7 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8d2-wK-Svz">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="1238"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="starwarsphoto" translatesAutoresizingMaskIntoConstraints="NO" id="vWZ-o1-O1l">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sw6" translatesAutoresizingMaskIntoConstraints="NO" id="vWZ-o1-O1l">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="415"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="415" id="pBu-Eb-nwW"/>
@@ -142,11 +147,10 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title Of the Film" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UiM-cL-cuD">
                                                 <rect key="frame" x="10" y="10" width="394" height="38"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="17"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" name="Default"/>
                                         <constraints>
                                             <constraint firstItem="UiM-cL-cuD" firstAttribute="leading" secondItem="U8i-pe-j8C" secondAttribute="leading" constant="10" id="0Ja-uB-d0G"/>
                                             <constraint firstAttribute="bottom" secondItem="UiM-cL-cuD" secondAttribute="bottom" constant="10" id="8gR-gr-NCR"/>
@@ -167,19 +171,16 @@
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Release Date:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bGU-2a-xrP">
                                                                 <rect key="frame" x="0.0" y="0.0" width="69.5" height="15.5"/>
                                                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="11"/>
-                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Directed By:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wC8-dX-ShA">
                                                                 <rect key="frame" x="0.0" y="19.5" width="69.5" height="15.5"/>
                                                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="11"/>
-                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Produced By:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vEd-6R-VWj">
                                                                 <rect key="frame" x="0.0" y="39" width="69.5" height="15.5"/>
                                                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="11"/>
-                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                         </subviews>
@@ -190,19 +191,19 @@
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Release date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YE4-xL-ZDA">
                                                                 <rect key="frame" x="0.0" y="0.0" width="112.5" height="15.5"/>
                                                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="11"/>
-                                                                <color key="textColor" red="1" green="0.91648432329999996" blue="0.14566610029999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <color key="textColor" systemColor="systemIndigoColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name of the director" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m95-GB-wup">
                                                                 <rect key="frame" x="0.0" y="19.5" width="112.5" height="15.5"/>
                                                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="11"/>
-                                                                <color key="textColor" red="1" green="0.91648432329999996" blue="0.14566610029999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <color key="textColor" systemColor="systemIndigoColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name of the producer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vBD-T5-i24">
                                                                 <rect key="frame" x="0.0" y="39" width="112.5" height="15.5"/>
                                                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="11"/>
-                                                                <color key="textColor" red="1" green="0.91648432329999996" blue="0.14566610029999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <color key="textColor" systemColor="systemIndigoColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                         </subviews>
@@ -210,7 +211,7 @@
                                                 </subviews>
                                             </stackView>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.20279216766357422" green="0.19935736060142517" blue="0.26363995671272278" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" name="Primary"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="78" id="KlT-a9-4p7"/>
                                             <constraint firstItem="d8V-tZ-0jY" firstAttribute="top" secondItem="DEO-OJ-PxZ" secondAttribute="top" constant="10" id="vFL-eY-8ec"/>
@@ -228,7 +229,6 @@
                                                 </constraints>
                                                 <string key="text">It is a period of civil war. Rebel spaceships, striking nfrom a hidden base, have won ntheir first victory against nthe evil Galactic Empire. During the battle, Rebel nspies managed to steal secret nplans to the Empire's nultimate weapon, the DEATH STAR, an armored space nstation with enough power\r\nto destroy an entire planet. Pursued by the Empire's nsinister agents, Princess nLeia races home aboard her nstarship, custodian of the nstolen plans that can save her npeople and restore nfreedom to the galaxy...</string>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wJU-oc-oqZ">
@@ -252,7 +252,7 @@
                                     </stackView>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Wyi-Nv-Sz3">
                                         <rect key="frame" x="10" y="781" width="394" height="515"/>
-                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" name="Default"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CharactersCell" rowHeight="56" id="7OG-rf-AsI" customClass="CharactersTVC" customModule="StarWarsMovies" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="50" width="394" height="56"/>
@@ -264,7 +264,6 @@
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Character Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4rK-uo-Xa9">
                                                             <rect key="frame" x="10" y="10" width="374" height="36"/>
                                                             <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
-                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
@@ -275,7 +274,7 @@
                                                         <constraint firstAttribute="bottom" secondItem="4rK-uo-Xa9" secondAttribute="bottom" constant="10" id="Mx6-sT-vPU"/>
                                                     </constraints>
                                                 </tableViewCellContentView>
-                                                <color key="backgroundColor" red="0.16376876831054688" green="0.16027939319610596" blue="0.21171584725379944" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" name="Primary"/>
                                                 <connections>
                                                     <outlet property="characterName" destination="4rK-uo-Xa9" id="sk5-G1-Cae"/>
                                                 </connections>
@@ -284,14 +283,14 @@
                                     </tableView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vG0-3Z-p8e">
                                         <rect key="frame" x="10" y="714" width="394" height="1"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" systemColor="labelColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="qKG-HL-duv"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UeU-9I-MFS">
                                         <rect key="frame" x="10" y="767" width="394" height="1"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" systemColor="labelColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="aIY-xD-aHk"/>
                                         </constraints>
@@ -303,7 +302,6 @@
                                             <constraint firstAttribute="height" constant="26" id="thS-zP-erc"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="19"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zOL-n5-oqb">
@@ -355,7 +353,7 @@
                             </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="nn7-9B-23x"/>
-                        <color key="backgroundColor" red="0.088984332979999997" green="0.085541494189999998" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" name="Default"/>
                         <constraints>
                             <constraint firstItem="8d2-wK-Svz" firstAttribute="top" secondItem="nev-e3-JNC" secondAttribute="top" id="b2B-ak-NZ8"/>
                             <constraint firstAttribute="bottom" secondItem="8d2-wK-Svz" secondAttribute="bottom" id="glx-fY-uv3"/>
@@ -376,35 +374,44 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZWT-XV-rgf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2134.7826086956525" y="-1422.3214285714284"/>
+            <point key="canvasLocation" x="3044.9275362318845" y="-1422.3214285714284"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="Pzs-uH-uK3">
+        <scene sceneID="J3y-V4-YZk">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="l1P-Tr-Vr3" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bRN-xK-sRp" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="06D-es-AzA">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="HuV-DZ-REX">
                         <rect key="frame" x="0.0" y="48" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <textAttributes key="titleTextAttributes">
-                            <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="25"/>
-                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="m7I-oc-rww"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="sZf-nG-ydE"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jIl-63-jHR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8g3-yV-xLk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="265" y="-1421"/>
+            <point key="canvasLocation" x="1198.5507246376812" y="-1422.3214285714284"/>
         </scene>
     </scenes>
     <resources>
         <image name="starwarsphoto" width="970" height="647"/>
-        <namedColor name="Primary">
-            <color red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <image name="sw6" width="1920" height="1080"/>
+        <namedColor name="Default">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <namedColor name="Primary">
+            <color red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>
