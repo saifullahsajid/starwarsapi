@@ -16,9 +16,8 @@ class FilmService {
         do {
             let (data, _) = try await URLSession.shared.data(from: URL(string: swapiRequestURL)!)
             if let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any],
-                  let filmsData = json["results"] as? [[String: Any]] {
+               let filmsData = json["results"] as? [[String: Any]] {
                 var films: [Film] = []
-//                var characters: [String] = []
                 for film in filmsData {
                     let title = film["title"] as? String
                     let characters = film["characters"] as? [String] ?? []
@@ -37,7 +36,6 @@ class FilmService {
                     films.append(film)
                 }
                 films.reverse()
-//                globalFilms = films
                 return films
             }
             return []
