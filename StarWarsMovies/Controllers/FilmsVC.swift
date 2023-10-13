@@ -16,10 +16,10 @@ class FilmsVC: UIViewController {
     
     @IBOutlet weak var filmsTableView: UITableView!
     
-    let swapiRequestURL = "https://swapi.dev/api/films/"
     var globalFilms = [Film]()
     var characters: [String] = []
-    var selectedFilm:Film?
+    var selectedFilm: Film?
+    let filmService = FilmService()
     let images: [UIImage] = [UIImage(named: "sw1")!, UIImage(named: "sw2")!, UIImage(named: "sw3")!, UIImage(named: "sw4")!, UIImage(named: "sw5")!, UIImage(named: "sw6")!]
     
     // MARK: - viewWillAppear
@@ -34,31 +34,9 @@ class FilmsVC: UIViewController {
         self.filmsTableView.separatorStyle = .none
         self.filmsTableView.delegate = self
         self.filmsTableView.dataSource = self
-        fetchFilms()
-    }
-    
-    func fetchFilms() {
-        Alamofire.request(swapiRequestURL, method: .get, parameters: nil, encoding: URLEncoding(destination: .methodDependent), headers: nil).responseJSON { [weak self] (response) in
-            guard let weakSelf = self else { return }
-            guard let JSON = response.result.value as? [String:Any],
-                  let filmsData = JSON["results"] as? [[String:Any]] else {
-                      print("Could not parse film values")
-                      return
-                  }
-            for film in filmsData {
-                let title = film["title"] as? String
-                weakSelf.characters = film["characters"] as! [String]
-                let director = film["director"] as? String
-                let opening_crawl = film["opening_crawl"] as? String
-                let producer = film["producer"] as? String
-                let release_date = film["release_date"] as? String
-                let film = Film(film_title: title, film_characters: weakSelf.characters, film_director: director, film_opening_crawl: opening_crawl, film_producer: producer, film_releaseDate: release_date)
-                weakSelf.globalFilms.append(film)
-            }
-            weakSelf.globalFilms.reverse()
-            DispatchQueue.main.async {
-                weakSelf.filmsTableView.reloadData()
-            }
+        Task {
+            globalFilms = await filmService.fetchFilms()
+            filmsTableView.reloadData()
         }
     }
     

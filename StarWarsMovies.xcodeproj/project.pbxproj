@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		62905CB32AD9D01000CA6DB2 /* FilmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62905CB22AD9D01000CA6DB2 /* FilmService.swift */; };
 		764FEC76231FD39A000E6BC1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764FEC75231FD39A000E6BC1 /* AppDelegate.swift */; };
 		764FEC78231FD39A000E6BC1 /* FilmsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764FEC77231FD39A000E6BC1 /* FilmsVC.swift */; };
 		764FEC7B231FD39A000E6BC1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 764FEC79231FD39A000E6BC1 /* Main.storyboard */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		62905CB22AD9D01000CA6DB2 /* FilmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmService.swift; sourceTree = "<group>"; };
 		731A0D8F1306FA8542539D33 /* Pods_StarWarsMovies.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StarWarsMovies.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		764FEC72231FD39A000E6BC1 /* StarWarsMovies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarWarsMovies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		764FEC75231FD39A000E6BC1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +65,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		62905CB12AD9CFE700CA6DB2 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				62905CB22AD9D01000CA6DB2 /* FilmService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		764FEC69231FD39A000E6BC1 = {
 			isa = PBXGroup;
 			children = (
@@ -84,6 +94,7 @@
 		764FEC74231FD39A000E6BC1 /* StarWarsMovies */ = {
 			isa = PBXGroup;
 			children = (
+				62905CB12AD9CFE700CA6DB2 /* Services */,
 				764FEC89231FD481000E6BC1 /* Models */,
 				764FEC88231FD47B000E6BC1 /* Views */,
 				764FEC87231FD46E000E6BC1 /* Controllers */,
@@ -261,6 +272,7 @@
 				764FEC9B23213406000E6BC1 /* Character.swift in Sources */,
 				764FEC9523202B1B000E6BC1 /* FilmsTVC.swift in Sources */,
 				764FEC9923213158000E6BC1 /* CharactersTVC.swift in Sources */,
+				62905CB32AD9D01000CA6DB2 /* FilmService.swift in Sources */,
 				764FEC78231FD39A000E6BC1 /* FilmsVC.swift in Sources */,
 				764FEC76231FD39A000E6BC1 /* AppDelegate.swift in Sources */,
 			);
@@ -340,7 +352,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -396,7 +408,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
