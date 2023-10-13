@@ -10,8 +10,6 @@ import UIKit
 
 class FilmsDetailVC: UIViewController {
     
-    // MARK: - Outlets
-    
     @IBOutlet weak var filmTitleLabel: UILabel!
     @IBOutlet weak var filmDirectorLabel: UILabel!
     @IBOutlet weak var filmsProducerLabel: UILabel!
@@ -22,9 +20,6 @@ class FilmsDetailVC: UIViewController {
     var globalCharacters = [Character]()
     var selectedFilm: Film?
     
-    
-    // MARK: - Lifecycle
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.charactersTableView.delegate = self
@@ -33,8 +28,6 @@ class FilmsDetailVC: UIViewController {
             await fetchCharacters()
         }
     }
-    
-    // MARK: - Functions
     
     func fetchCharacters() async {
         if let film = self.selectedFilm {
@@ -60,15 +53,10 @@ class FilmsDetailVC: UIViewController {
         }
     }
     
-    
-    // MARK: - Actions
-    
     @IBAction func closeDetailViewController(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
 }
-
-// MARK: - UITableView
 
 extension FilmsDetailVC: UITableViewDelegate, UITableViewDataSource {
     

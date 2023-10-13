@@ -11,8 +11,6 @@ import UIKit
 
 class FilmsVC: UIViewController {
     
-    // MARK: - Outlets
-    
     @IBOutlet weak var filmsTableView: UITableView!
     
     var globalFilms = [Film]()
@@ -21,12 +19,10 @@ class FilmsVC: UIViewController {
     let filmService = FilmService()
     let images: [UIImage] = [UIImage(named: "sw1")!, UIImage(named: "sw2")!, UIImage(named: "sw3")!, UIImage(named: "sw4")!, UIImage(named: "sw5")!, UIImage(named: "sw6")!]
     
-    // MARK: - viewWillAppear
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.navigationBar.barStyle = .black
     }
     
-    // MARK: - viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -44,9 +40,6 @@ class FilmsVC: UIViewController {
         detailViewController.selectedFilm = self.selectedFilm
     }
 }
-
-
-// MARK: - UITableView
 
 extension FilmsVC: UITableViewDelegate, UITableViewDataSource {
     
