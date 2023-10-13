@@ -44,33 +44,18 @@ class FilmsDetailVC: UIViewController {
             self.filmsProducerLabel.text = film.producer
             self.filmDescriptionLabel.text = film.opening_crawl
             for characters in film.characters {
-//                Alamofire.request(characters, method: .get, parameters: nil, encoding: URLEncoding(destination: .methodDependent), headers: nil).responseJSON { [weak self] (response) in
-//                    guard let weakSelf = self else { return }
-//                    guard let JSON = response.result.value as? [String:Any],
-//                          let charactersData = JSON["name"] as? String else {
-//                              print("Could not parse character values")
-//                              return
-//                          }
-//                    let character = Character(character_name: charactersData)
-//                    weakSelf.globalCharacters.append(character)
-//                    DispatchQueue.main.async {
-//                        weakSelf.charactersTableView.reloadData()
-//                    }
-//                }
-                
-                   do {
-                       let (data, _) = try await URLSession.shared.data(from: URL(string: characters)!)
-                       let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any]
-
-                       if let charactersData = json?["name"] as? String {
-                           let character = Character(character_name: charactersData)
-                           globalCharacters.append(character)
+                do {
+                    let (data, _) = try await URLSession.shared.data(from: URL(string: characters)!)
+                    let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any]
+                    
+                    if let charactersData = json?["name"] as? String {
+                        let character = Character(character_name: charactersData)
+                        globalCharacters.append(character)
                         charactersTableView.reloadData()
-                       }
-                   } catch {
-                       print("Error: \(error)")
-                   }
-               
+                    }
+                } catch {
+                    print("Error: \(error)")
+                }
             }
         }
     }
