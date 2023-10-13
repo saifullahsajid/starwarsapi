@@ -8,23 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		62905CB32AD9D01000CA6DB2 /* FilmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62905CB22AD9D01000CA6DB2 /* FilmService.swift */; };
+		62905CB62AD9D46500CA6DB2 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 62905CB52AD9D46500CA6DB2 /* Kingfisher */; };
 		764FEC76231FD39A000E6BC1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764FEC75231FD39A000E6BC1 /* AppDelegate.swift */; };
 		764FEC78231FD39A000E6BC1 /* FilmsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764FEC77231FD39A000E6BC1 /* FilmsVC.swift */; };
 		764FEC7B231FD39A000E6BC1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 764FEC79231FD39A000E6BC1 /* Main.storyboard */; };
 		764FEC7D231FD39C000E6BC1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 764FEC7C231FD39C000E6BC1 /* Assets.xcassets */; };
 		764FEC80231FD39C000E6BC1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 764FEC7E231FD39C000E6BC1 /* LaunchScreen.storyboard */; };
 		764FEC8F231FDCBB000E6BC1 /* Film.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764FEC8E231FDCBB000E6BC1 /* Film.swift */; };
-		764FEC93231FE049000E6BC1 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 764FEC92231FE049000E6BC1 /* Alamofire.framework */; };
 		764FEC9523202B1B000E6BC1 /* FilmsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764FEC9423202B1B000E6BC1 /* FilmsTVC.swift */; };
 		764FEC9723211507000E6BC1 /* FilmsDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764FEC9623211507000E6BC1 /* FilmsDetailVC.swift */; };
 		764FEC9923213158000E6BC1 /* CharactersTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764FEC9823213158000E6BC1 /* CharactersTVC.swift */; };
 		764FEC9B23213406000E6BC1 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764FEC9A23213406000E6BC1 /* Character.swift */; };
-		867A7F077093D1D4A2950CB3 /* Pods_StarWarsMovies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 731A0D8F1306FA8542539D33 /* Pods_StarWarsMovies.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		62905CB22AD9D01000CA6DB2 /* FilmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmService.swift; sourceTree = "<group>"; };
-		731A0D8F1306FA8542539D33 /* Pods_StarWarsMovies.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StarWarsMovies.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		764FEC72231FD39A000E6BC1 /* StarWarsMovies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarWarsMovies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		764FEC75231FD39A000E6BC1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		764FEC77231FD39A000E6BC1 /* FilmsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmsVC.swift; sourceTree = "<group>"; };
@@ -39,8 +37,6 @@
 		764FEC9623211507000E6BC1 /* FilmsDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmsDetailVC.swift; sourceTree = "<group>"; };
 		764FEC9823213158000E6BC1 /* CharactersTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersTVC.swift; sourceTree = "<group>"; };
 		764FEC9A23213406000E6BC1 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
-		DC69A194D2AF370F27D9F79C /* Pods-StarWarsMovies.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarWarsMovies.debug.xcconfig"; path = "Target Support Files/Pods-StarWarsMovies/Pods-StarWarsMovies.debug.xcconfig"; sourceTree = "<group>"; };
-		FC7FF7FD14FF419F9D6EAA69 /* Pods-StarWarsMovies.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarWarsMovies.release.xcconfig"; path = "Target Support Files/Pods-StarWarsMovies/Pods-StarWarsMovies.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,23 +44,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				764FEC93231FE049000E6BC1 /* Alamofire.framework in Frameworks */,
-				867A7F077093D1D4A2950CB3 /* Pods_StarWarsMovies.framework in Frameworks */,
+				62905CB62AD9D46500CA6DB2 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1047B558D5FB8CFC004BCFB7 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				DC69A194D2AF370F27D9F79C /* Pods-StarWarsMovies.debug.xcconfig */,
-				FC7FF7FD14FF419F9D6EAA69 /* Pods-StarWarsMovies.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
 		62905CB12AD9CFE700CA6DB2 /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -78,7 +64,6 @@
 			children = (
 				764FEC74231FD39A000E6BC1 /* StarWarsMovies */,
 				764FEC73231FD39A000E6BC1 /* Products */,
-				1047B558D5FB8CFC004BCFB7 /* Pods */,
 				950A61AE9C0A48E49D91F35F /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -138,7 +123,6 @@
 			children = (
 				764FEC92231FE049000E6BC1 /* Alamofire.framework */,
 				764FEC90231FE037000E6BC1 /* AwesomeCache.framework */,
-				731A0D8F1306FA8542539D33 /* Pods_StarWarsMovies.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -159,17 +143,18 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 764FEC84231FD39C000E6BC1 /* Build configuration list for PBXNativeTarget "StarWarsMovies" */;
 			buildPhases = (
-				23C60BBFD939AF410952DC8D /* [CP] Check Pods Manifest.lock */,
 				764FEC6E231FD39A000E6BC1 /* Sources */,
 				764FEC6F231FD39A000E6BC1 /* Frameworks */,
 				764FEC70231FD39A000E6BC1 /* Resources */,
-				FAA725F195CACDB668BCF684 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = StarWarsMovies;
+			packageProductDependencies = (
+				62905CB52AD9D46500CA6DB2 /* Kingfisher */,
+			);
 			productName = StarWarsMovies;
 			productReference = 764FEC72231FD39A000E6BC1 /* StarWarsMovies.app */;
 			productType = "com.apple.product-type.application";
@@ -198,6 +183,9 @@
 				Base,
 			);
 			mainGroup = 764FEC69231FD39A000E6BC1;
+			packageReferences = (
+				62905CB42AD9D46500CA6DB2 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 764FEC73231FD39A000E6BC1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -219,48 +207,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		23C60BBFD939AF410952DC8D /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-StarWarsMovies-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		FAA725F195CACDB668BCF684 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-StarWarsMovies/Pods-StarWarsMovies-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-StarWarsMovies/Pods-StarWarsMovies-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-StarWarsMovies/Pods-StarWarsMovies-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		764FEC6E231FD39A000E6BC1 /* Sources */ = {
@@ -420,7 +366,6 @@
 		};
 		764FEC85231FD39C000E6BC1 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DC69A194D2AF370F27D9F79C /* Pods-StarWarsMovies.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -439,7 +384,6 @@
 		};
 		764FEC86231FD39C000E6BC1 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FC7FF7FD14FF419F9D6EAA69 /* Pods-StarWarsMovies.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -478,6 +422,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		62905CB42AD9D46500CA6DB2 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.9.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		62905CB52AD9D46500CA6DB2 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 62905CB42AD9D46500CA6DB2 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 764FEC6A231FD39A000E6BC1 /* Project object */;
 }
